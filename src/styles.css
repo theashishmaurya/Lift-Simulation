@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+
+
+/* Floor Logic Here */
+
+.floor-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.floor{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 7rem;
+    border: 4px solid black;
+    margin:1rem 0rem;
+    padding: 1rem;
+}
+
+
+
+
+/* Button CSS Logics here */
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+    width: 1.5rem;
+    height:1.5rem;
+    /** clip border to triangle  and add border to it**/
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    margin:0.1rem 
+}
+
+
+.button.down{
+    transform: rotate(180deg);
+}
+.button.up.active{
+    background-color: #00ff00;
+}
+.button.down.active{
+    background-color: #ff0000;
+}
+
+/* Button CSS Logics here */
+
+
+
+/* Lift CSS Logics here */
+
+.lift-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: auto;
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: auto;
+
+
+}
+
+.lift{
+    min-width: 5rem;
+    position: absolute;
+    height: 6rem;
+    background-color: #0000ff;
+    margin:0.1rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    transition:  "all 1s ease-in-out";
+}
+
+/* Add delay to the lift movement */
+
+
+
+.lift.move{
+    animation: move 1s;
+}
+
+@keyframes move{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+
+
+
+
+
+.input-wrapper {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height:100vh;
+}
+
+input {
+    width: 10rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+.input-wrapper button {
+    width: 5rem;
+    height: 2rem;
+    border: 1px solid black;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
