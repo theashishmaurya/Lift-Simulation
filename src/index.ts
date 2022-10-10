@@ -123,8 +123,7 @@ import "./styles.css"
     // Once lift and floor are generated, we need to append them to the body
 
     appendLiftAndFloor(){
-        let body = document.getElementById('app') as HTMLElement
-        body.appendChild(this.generateFloor());
+        document.body.appendChild(this.generateFloor());
 
     }
 
