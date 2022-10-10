@@ -1,7 +1,9 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.ts",
-  mode: "development",
+  mode: "production",
   devServer: {
     static: {
       directory: path.join(__dirname, "dist"),
@@ -26,9 +28,10 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".js"],
   },
+  plugins: [new HtmlWebpackPlugin()],
   output: {
     filename: "bundle.js",
-    path: path.resolve(__dirname, "dist/js"),
-    publicPath: "/dist/js/", // instead of publicPath: '/build/'
+    path: path.resolve(__dirname, "dist"),
+    publicPath: "/dist", // instead of publicPath: '/build/'
   },
 };
